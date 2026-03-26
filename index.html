@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Pronóstico del Clima</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="weather-app">
+        <!-- Header/Navigation -->
+        <header class="app-header">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <div class="app-logo">
+                            <i class="fas fa-cloud-sun-rain"></i>
+                            <span class="app-name">WeatherHub</span>
+                        </div>
+                    </div>
+                    <div class="col-auto ms-auto">
+                        <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="app-main">
+            <div class="container-fluid">
+                <!-- Hero Section -->
+                <section class="hero-section mb-5">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-8">
+                            <div class="hero-content">
+                                <h1 class="hero-title">Descubre el Clima</h1>
+                                <p class="hero-subtitle">Obtén pronósticos precisos en tiempo real para cualquier ciudad
+                                </p>
+
+                                <!-- Search Box -->
+                                <div class="search-box-wrapper">
+                                    <div class="search-box">
+                                        <input type="text" id="cityInput" class="search-input"
+                                            placeholder="Busca una ciudad... (ej: Madrid, Barcelona, Valencia)"
+                                            autocomplete="off">
+                                        <button class="search-btn" id="searchBtn">
+                                            <i class="fas fa-search"></i>
+                                            <span class="btn-text">Buscar</span>
+                                        </button>
+                                    </div>
+                                    <p class="search-hint"
+                                        style="text-align: center; margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.8; color: var(--text-secondary);">
+                                        💡 Separar múltiples ciudades con comas para compararlas
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Results Section -->
+                <section class="results-section">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <div id="result" class="result-container"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Info Cards Section -->
+                <section class="info-section mt-5">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-8">
+                            <div class="info-cards">
+                                <div class="info-card">
+                                    <div class="info-icon">
+                                        <i class="fas fa-temperature-high"></i>
+                                    </div>
+                                    <h3>Temperatura</h3>
+                                    <p>Información precisa en tiempo real</p>
+                                </div>
+                                <div class="info-card">
+                                    <div class="info-icon">
+                                        <i class="fas fa-wind"></i>
+                                    </div>
+                                    <h3>Viento</h3>
+                                    <p>Velocidad del viento actualizada</p>
+                                </div>
+                                <div class="info-card">
+                                    <div class="info-icon">
+                                        <i class="fas fa-map-location-dot"></i>
+                                    </div>
+                                    <h3>Ubicación</h3>
+                                    <p>Para cualquier ciudad del mundo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="container-fluid">
+                <p>&copy; 2026 WeatherHub. Datos proporcionados por Open-Meteo.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- App Script -->
+    <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>
