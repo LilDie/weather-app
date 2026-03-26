@@ -89,6 +89,3 @@ http://localhost:3000
 
 ---
 
-## 👨‍💻 Autor
-
-Proyecto desarrollado como práctica de consumo de APIs y manejo de
